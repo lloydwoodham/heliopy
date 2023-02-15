@@ -8,6 +8,7 @@ For more information about TimeSeries, http://docs.sunpy.org/en/stable/guide/dat
 For more information about AstroPy Units, http://docs.astropy.org/en/stable/units/
 """
 
+
 import numpy as np
 import datetime
 import pandas as pd
@@ -16,7 +17,7 @@ from collections import OrderedDict
 import astropy.units as u
 
 # The index of the SunPy Timeseries is always datetime
-base = datetime.datetime.today()
+base = datetime.datetime.now()
 times = [base - datetime.timedelta(minutes=x) for x in range(24*60, 0, -1)]
 intensity = np.sin(np.arange(0, 12 * np.pi, ((12 * np.pi) / (24*60))))
 
